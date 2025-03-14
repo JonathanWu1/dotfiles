@@ -1,0 +1,5 @@
+cursor-style=block
+shell-integration-features=no-cursor
+keybind=ctrl+r=reload_config
+keybind=ctrl+up=new_split:up
+
