@@ -1,0 +1,10 @@
+*.pfx
+*.pem
+*.p12
+vpng-logineer-tunnel/
+
+
+
+profileinfo.txt
+*.log
+*.zip

@@ -101,11 +101,8 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
 #
 
-export PATH="${PATH}:/opt/nvim-linux-x86_64/bin"
 
 bindkey '^h' backward-kill-word
 bindkey '^l' forward-word 
