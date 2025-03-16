@@ -1,5 +1,20 @@
 cursor-style=block
 shell-integration-features=no-cursor
-keybind=ctrl+r=reload_config
-keybind=ctrl+up=new_split:up
+
+keybind=ctrl+f5=reload_config
+keybind=super+up=toggle_maximize
+
+#Panels
+keybind=ctrl+shift+left=new_split:left
+keybind=ctrl+shift+right=new_split:right
+
+keybind=ctrl+shift+h=goto_split:left
+keybind=ctrl+shift+l=goto_split:right
+
+keybind=ctrl+shift+alt+left=resize_split:left,10
+keybind=ctrl+shift+alt+right=resize_split:right,10
+
+keybind=ctrl+b=close_surface
+
+
 
