@@ -3,7 +3,6 @@
 sudo apt update
 sudo apt upgrade
 
-
 sudo apt install git make unzip gcc ripgrep -y
 
 mkdir ~/setup & cd ~/setup
@@ -22,6 +21,7 @@ cp ~/setup/dotfiles/.zshrc ~/.zshrc
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 export PROFILE=~/.zshrc
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 
 nvm install 22
@@ -32,6 +32,8 @@ rm packages-microsoft-prod.deb
 
 sudo apt-get install -y dotnet-sdk-9.0
 sudo apt-get install -y aspnetcore-runtime-9.0
+
+dotnet tool install -g JetBrains.Resharper.GlobalTools
 
 sudo apt update
 sudo apt upgrade
