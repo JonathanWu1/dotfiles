@@ -1,0 +1,11 @@
+cursor-style=block
+shell-integration-features=no-cursor
+font-feature=-calt
+
+keybind=ctrl+f5=reload_config
+keybind=super+up=toggle_maximize
+
+keybind=ctrl+enter=unbind
+keybind=ctrl+shift+o=unbind
+keybind=ctrl+shift+e=unbind
+

@@ -10,13 +10,12 @@ mkdir ~/setup & cd ~/setup
 git clone http://github.com/JonathanWu1/dotfiles.git
 
 sudo snap install ghostty --classic
-cp ~/setup/dotfiles/config ~/.config/ghostty/
+sudo update-alternatives --list x-terminal-emulator
 
 chsh -s $(which zsh)
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-cp ~/setup/dotfiles/.zshrc ~/.zshrc
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
@@ -37,3 +36,10 @@ dotnet tool install -g JetBrains.Resharper.GlobalTools
 
 sudo apt update
 sudo apt upgrade
+
+
+cp -r ./ghostty ~/.config/
+cp -r ./i3 ~/.config/
+cp -r ./rofi ~/.config/
+cp ./.zshrc ~/.zshrc
+cp -r ./ohmyzsh/ ~/.oh-my-zsh/custom/
