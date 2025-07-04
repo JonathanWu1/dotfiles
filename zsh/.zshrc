@@ -13,6 +13,7 @@ plugins=(git; zsh-interactive-cd; zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 export PATH="${PATH}:/opt/nvim-linux-x86_64/bin"
+export GCM_CREDENTIAL_STORE="gpg"
 
 bindkey '^h' backward-word
 bindkey '^b' backward-kill-word
