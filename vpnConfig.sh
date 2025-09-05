@@ -1,3 +1,10 @@
+if [[ "$1" = '' ]]; then
+	echo "parameter password is required"
+	exit 0
+fi
+
+export USERNAME=$(hostnamectl --static)
+
 sudo apt-get install -y unzip openvpn network-manager-openvpn
 sudo systemctl restart systemd-networkd
 
