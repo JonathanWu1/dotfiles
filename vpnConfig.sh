@@ -1,26 +1,22 @@
-if [[ "$1" = '' ]]; then
-	echo "parameter password is required"
-	exit 0
-fi
-
-export USERNAME=$(hostnamectl --static)
+rm -rf "$HOME/.temp/vpn"
+mkdir -p "$HOME/.temp/vpn"
+cp "$HOME/Downloads/vpng-logineer-tunnel.zip" "$HOME/.temp/vpn/vpn.zip"
 
 sudo apt-get install -y unzip openvpn network-manager-openvpn
 sudo systemctl restart systemd-networkd
 
-unzip vpn.zip -d vpn
+unzip -o "$HOME/.temp/vpn/vpn.zip" -d "$HOME/.temp/vpn/vpn"
 
-cp vpn/OpenVPN/vpnconfig_cert.ovpn vpnconfig.ovpn
+mkdir -p $HOME/.config/vpnconfig
 
-sed -i '/$CLIENTCERTIFICATE/r .tempVpn/${USERNAME}Cert.pem' vpnconfig.ovpn
-sed -i '/$PRIVATEKEY/r .tempVpn/${USERNAME}Key.pem' vpnconfig.ovpn
+mv $HOME/.temp/vpn/vpn/OpenVPN/vpnconfig_cert.ovpn ~/.config/vpnconfig/vpnconfig.ovpn
 
-sed -i '/$CLIENTCERTIFICATE/d' vpnconfig.ovpn
-sed -i '/$PRIVATEKEY/d' vpnconfig.ovpn
+echo "key $HOME/.config/vpnconfig/key.pem" >> $HOME/.config/vpnconfig/vpnconfig.ovpn
+echo "cert $HOME/.config/vpnconfig/cert.pem" >> $HOME/.config/vpnconfig/vpnconfig.ovpn
 
-mkdir -p ~/.config/vpnconfig
+rm -rf "$HOME/.temp/vpn"
 
-cp ./vpnconfig.ovpn ~/.config/vpnconfig/
+
 
 
 
