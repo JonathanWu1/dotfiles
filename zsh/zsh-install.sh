@@ -1,9 +1,12 @@
+sudo rm -rf ~/.oh-my-zsh/
 sudo apt install zsh -y
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/jeffreytse/zsh-vi-mode $HOME/.oh-my-zsh/custom/plugins/zsh-vi-mode
 
-cp ~/dotfiles/.zshrc ~
-cp ~/dotfiles/ohmyzsh/path.sh ~/.oh-my-zsh/custom/
-cp ~/dotfiles/ohmyzsh/aliases.sh ~/.oh-my-zsh/custom/
+cp $HOME/dotfiles/zsh/.zshrc $HOME/.zshrc
+
+exec zsh
+
