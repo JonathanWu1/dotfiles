@@ -27,10 +27,6 @@ tiling_drag modifier titlebar
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-exec xinput --set-prop "pointer:Logitech G502" "libinput Accel Speed" -0.5
-exec xrandr --output DisplayPort-1 --right-of DisplayPort-0
-exec xrandr --output DisplayPort-6 --left-of DisplayPort-0 --rotate left
-
 bindsym --release Print exec  maim -s | xclip -selection clipboard -t image/png 
 
 

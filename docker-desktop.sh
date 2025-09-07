@@ -1,6 +1,9 @@
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
+
+curl --output docker-desktop.deb "https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64"
+
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
@@ -15,4 +18,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 sudo apt-get update
 
-sudo apt-get install ~/Downloads/docker-desktop-amd64.deb
+sudo apt-get install ./docker-desktop.deb
+
+rm ./docker-desktop.deb
+
