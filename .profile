@@ -27,9 +27,9 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export TERMINAL="/snap/bin/ghostty"
+export XCURSOR_SIZE=48
 
 
 xinput --set-prop "pointer:Logitech G502" "libinput Accel Speed" -0.5
 xrandr --output DisplayPort-1 --right-of DisplayPort-0
 xrandr --output DisplayPort-6 --left-of DisplayPort-0 --rotate left
-
