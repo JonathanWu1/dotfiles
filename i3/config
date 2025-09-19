@@ -173,8 +173,8 @@ for_window [class="^Google-chrome$" title="^DevTools"] move container to workspa
 for_window [title="YouTube Music"] move container to workspace $ws5 
 for_window [title="Microsoft Teams"] move container to workspace $ws5 
 
-for_window [class="^org.gnome.Nautilus"] move container to workspace $ws6 
-for_window [class="^libreoffice"] move container to workspace $ws6 
+for_window [class="^org.gnome.Nautilus"] move container to workspace $ws4 
+for_window [class="^libreoffice"] move container to workspace $ws4 
 
 
 default_border none
