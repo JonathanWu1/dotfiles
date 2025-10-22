@@ -43,7 +43,7 @@ focus_follows_mouse no
 set $ws1 "1 Terminal"
 set $ws2 "2 Rider"
 set $ws3 "3 Chrome"
-set $ws4 "4 VsCode"
+set $ws4 "4 Other"
 set $ws5 "5 Teams"
 set $ws6 "6 Explorer"
 set $ws7 "7 Docker Desktop"

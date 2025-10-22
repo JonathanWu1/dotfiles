@@ -1,5 +1,7 @@
 let mapleader = " "
 
+set clipboard+=unnamedplus
+
 set scrolloff=10
 set incsearch
 map Q gq
@@ -86,3 +88,5 @@ map t <Action>(ExpandCollapseToggleAction)
 map :wf <Action>(Javascript.Linters.EsLint.Fix):w
 map :wr <Action>(CodeCleanup)
 map :diff <Action>(ShowBlankDiffWindow)
+
+map <A-r> <Action>(Resume)
