@@ -41,6 +41,9 @@ echo "Installed ghostty"
 chmod +x ./zsh/zsh-install.sh
 ./zsh/zsh-install.sh
 
+chmod +x ./1password.sh
+./1password.sh
+
 
 
 
