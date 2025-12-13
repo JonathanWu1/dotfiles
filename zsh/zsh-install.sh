@@ -1,10 +1,26 @@
-sudo rm -rf ~/.oh-my-zsh/
-sudo apt install zsh -y
+#!/usr/bin/env bash
+set -e
 
-RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+OMZ_GITHUB="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
+ZSH_AUTOSUGGEST="https://github.com/zsh-users/zsh-autosuggestions"
+ZSH_VI="https://github.com/jeffreytse/zsh-vi-mode"
+PLUGIN_DIR="$HOME/.oh-my-zsh/custom/plugins/"
 
-git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone https://github.com/jeffreytse/zsh-vi-mode $HOME/.oh-my-zsh/custom/plugins/zsh-vi-mode
+if [[ $EUID -ne 0 ]]; then
+    sudo -v
+fi
+
+echo "Removing old omz"
+rm -rf $HOME/.oh-my-zsh 2>&1
+
+echo "Installing zsh"
+sudo apt-get install zsh -y > /dev/null 2>&1
+
+echo "Installed zsh in $(which zsh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended > /dev/null 2>&1
+
+git clone $ZSH_AUTOSUGGEST "$PLUGIN_DIR/zsh-autosuggestions" > /dev/null 2>&1
+git clone $ZSH_VI "$PLUGIN_DIR/zsh-vi-mode" > /dev/null 2>&1
 
 cp $HOME/dotfiles/zsh/.zshrc $HOME/.zshrc
 
