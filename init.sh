@@ -38,11 +38,19 @@ sudo snap install ghostty --classic > /dev/null
 printf "\033[1A"
 echo "Installed ghostty"
 
-chmod +x ./zsh/zsh-install.sh
-./zsh/zsh-install.sh
 
-chmod +x ./1password.sh
-./1password.sh
+echo "Installing 1password"
+chmod +x ./1password.sh > /dev/null
+./1password.sh > /dev/null
+printf "\033[1A"
+echo "Installed 1password"
+
+
+echo "Installing zsh"
+chmod +x ./zsh/zsh-install.sh > /dev/null
+./zsh/zsh-install.sh > /dev/null
+printf "\033[1A"
+echo "Installed zsh"
 
 
 
