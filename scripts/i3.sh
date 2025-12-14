@@ -6,6 +6,7 @@ rm ./keyring.deb
 echo "deb [signed-by=/usr/share/keyrings/sur5r-keyring.gpg] http://debian.sur5r.net/i3/ $(grep '^VERSION_CODENAME=' /etc/os-release | cut -f2 -d=) universe" | sudo tee /etc/apt/sources.list.d/sur5r-i3.list
 sudo apt-get update -y
 sudo apt-get install i3 -y
+sudo apt-get install picom -y
 
 rm -rf $HOME/.config/i3
 ln -s $HOME/dotfiles/configs/i3 $HOME/.config/i3

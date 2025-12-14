@@ -41,5 +41,8 @@ export PATH="${PATH}:/snap/nvim/current/usr/bin/nvim"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export GCM_CREDENTIAL_STORE="gpg"
 export EDITOR="/snap/nvim/current/usr/bin/nvim"
+export GTK_THEME=Yaru-dark
+export GTK_ICON_THEME=Yaru-dark
+export XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share/icons:/usr/share/themes
 
 

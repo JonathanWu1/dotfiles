@@ -9,3 +9,7 @@ keybind=ctrl+enter=unbind
 keybind=ctrl+shift+o=unbind
 keybind=ctrl+shift+e=unbind
 
+gtk-toolbar-style=flat
+gtk-titlebar-style=tabs
+gtk-wide-tabs=false
+gtk-custom-css="./ghostty.css"
