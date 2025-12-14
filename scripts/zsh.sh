@@ -19,14 +19,14 @@ echo "Installing zsh"
 sudo apt-get install zsh -y
 
 echo "Installed zsh in $(which zsh)"
-ZSH="$HOME/.config/oh-my-zsh" KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+ZSH="$HOME/.config/oh-my-zsh" KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended > /dev/null 2>&1
 
 if [ ! -d "$PLUGIN_DIR/zsh-autosuggestions" ]; then
-    git clone $ZSH_AUTOSUGGEST "$PLUGIN_DIR/zsh-autosuggestions" > /dev/null
+    git clone $ZSH_AUTOSUGGEST "$PLUGIN_DIR/zsh-autosuggestions" > /dev/null 2>&1
 fi
 
 if [ ! -d "$PLUGIN_DIR/zsh-vi-mode" ]; then
-    git clone $ZSH_VI "$PLUGIN_DIR/zsh-vi-mode" > /dev/null
+    git clone $ZSH_VI "$PLUGIN_DIR/zsh-vi-mode" > /dev/null 2>&1
 fi
 
 rm ~/.zshrc
