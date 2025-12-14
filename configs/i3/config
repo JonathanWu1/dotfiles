@@ -75,15 +75,20 @@ bindsym $mod+Shift+w move container to workspace  $ws6
 bindsym $mod+Shift+e move container to workspace  $ws7
 bindsym $mod+Shift+r move container to workspace  $ws8
 
-
-# reload the configuration file
-bindsym XF86Launch5 reload
 # kill focused window
 bindsym $mod+Shift+x kill
+
+# reload the configuration file
+# bindsym XF86Launch5 reload
+bindsym $mod+F10 reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym XF86Tools restart
+#bindsym XF86Tools restart
+bindsym $mod+F11 restart
+
 # exit i3 (logs you out of your X session)
-bindsym XF86Launch7 exec "i3-nagbar -t warning -m 'Logout?' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym XF86Launch7 exec "i3-nagbar -t warning -m 'Logout?' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+F12 exec "i3-nagbar -t warning -m 'Logout?' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -150,15 +155,14 @@ bar {
 workspace $ws1 output primary
 workspace $ws2 output primary
 workspace $ws3 output primary
-
 workspace $ws4 output primary 
 
-workspace $ws5 output DisplayPort-1 
-workspace $ws6 output DisplayPort-1 
-workspace $ws7 output DisplayPort-1 
+workspace $ws5 output primary 
+workspace $ws6 output primary 
+workspace $ws7 output primary 
 
-workspace $ws8 output DisplayPort-6 
-workspace $ws9 output DisplayPort-6 
+workspace $ws8 output primary 
+workspace $ws9 output primary 
 
 
 

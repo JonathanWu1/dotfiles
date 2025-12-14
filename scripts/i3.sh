@@ -17,3 +17,7 @@ sudo apt-get install polybar -y
 
 rm -rf $HOME/.config/polybar
 ln -s $HOME/dotfiles/configs/polybar $HOME/.config/polybar
+
+sudo apt-get install rofi -y
+rm -rf $HOME/.config/rofi
+ln -s $HOME/dotfiles/configs/rofi $HOME/.config/rofi
