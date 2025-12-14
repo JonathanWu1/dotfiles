@@ -3,8 +3,8 @@
 *.p12
 vpng-logineer-tunnel/
 
-
-
 profileinfo.txt
 *.log
 *.zip
+
+configs/zsh/oh-my-zsh/custom/plugins
