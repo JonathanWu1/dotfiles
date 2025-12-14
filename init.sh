@@ -38,11 +38,13 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 sudo update-alternatives --set x-terminal-emulator /snap/bin/ghostty > /dev/null
 
 echo "Installing 1password"
+chmod +x ./scripts/1password.sh > /dev/null
 ./scripts/1password.sh > /dev/null 2>&1
 printf $CLEAR
 echo "Installed 1password"
 
 echo "Installing zsh"
+chmod +x ./scripts/zsh.sh > /dev/null
 ./scripts/zsh.sh > /dev/null
 printf $CLEAR
 echo "Installed zsh"
