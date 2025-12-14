@@ -29,15 +29,24 @@ fi
 export TERMINAL="/snap/bin/ghostty"
 export XCURSOR_SIZE=30
 
-
 xinput --set-prop "pointer:Logitech G502" "libinput Accel Speed" -0.5
 xrandr --output DisplayPort-1 --right-of DisplayPort-0
-
 xrandr --output DisplayPort-6 --left-of DisplayPort-0 --rotate left
+export XDG_DATA_DIRS="$HOME/.local/share/applications/"
 
-# Added by Toolbox App
-export PATH="$PATH:/home/jonathanwu/.local/share/JetBrains/Toolbox/scripts"
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
+export PATH="${PATH}:/snap/nvim/current/usr/bin/nvim"
 
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export GCM_CREDENTIAL_STORE="gpg"
+export EDITOR="/snap/nvim/current/usr/bin/nvim"
 
-systemctl enable --user app-com.mitchellh.ghostty.service
+
+# fnm
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+

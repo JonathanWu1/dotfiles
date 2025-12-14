@@ -29,5 +29,7 @@ if [ ! -d "$PLUGIN_DIR/zsh-vi-mode" ]; then
     git clone $ZSH_VI "$PLUGIN_DIR/zsh-vi-mode" > /dev/null
 fi
 
+rm ~/.zshrc
+ln -s $HOME/dotfiles/configs/zsh/.zshrc $HOME/.zshrc
 rm -rf $HOME/.config/oh-my-zsh/custom
 ln -s $HOME/dotfiles/configs/zsh/oh-my-zsh/custom $HOME/.config/oh-my-zsh/custom

@@ -1,0 +1,92 @@
+let mapleader = " "
+
+set clipboard+=unnamedplus
+
+set scrolloff=10
+set incsearch
+map Q gq
+
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+
+map <leader>fe <Action>(SearchEverywhere)
+map <leader>ff <Action>(GotoFile)
+map <leader>ft <Action>(GotoLine)
+map <leader>fs <Action>(GotoSymbol)
+map <leader>fc <Action>(GotoClass)
+map <leader>fg <Action>(TextSearchAction)
+
+map <A-e> <Action>(RecentFiles)  
+
+map gf <Action>(SelectIn)  
+map gc <Action>(ExternalSystem.CollapseAll)
+
+map <C-g> <Action>(Git.Branches)
+map <C-t> <Action>(ChooseDebugConfiguration)
+
+nnoremap <A-r> :~/.ideavimrc<CR>
+
+map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>dab <Action>(RiderRemoveAllLineBreakpoints)
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cc <Action>(CodeCompletion)
+map gi <Action>(GotoImplementation)
+map gd <Action>(GotoDeclaration)
+map gn <Action>(GotoNextError)
+map gp <Action>(GotoPreviousError)
+map gu <Action>(ShowUsages)
+map gm <Action>(NextOccurence)<CR>$<CR>
+map gb <Action>(PreviousOccurence)<CR>$<CR>
+vmap gc <Action>(CommentByLineComment)
+map <leader>tp <Action>(PinActiveTab)
+map <leader>ta <Action>(CloseAllEditors)
+map <leader>tc <Action>(CloseEditor)
+map <leader>tr <Action>(RiderUnitTestRunContextAction)
+map <leader>td <Action>(RiderUnitTestDebugContextAction)
+vmap K <Action>(MoveLineUp)
+vmap J <Action>(MoveLineDown)
+
+map <C-j> 10j  
+map <C-k> 10k
+
+map <C-f> <C-f>zz
+map <C-d> <C-d>zz
+map <C-u> <C-u>zz
+map <C-b> <C-b>zz
+
+nnoremap H _
+nnoremap L $
+nnoremap <A-h> ,
+nnoremap <A-l> ;
+vmap H _
+vmap L $
+imap <C-y> <Action>(InsertInlineCompletionAction)
+
+
+map <A-k> <Action>(EditorCloneCaretAbove)
+map <A-j> <Action>(EditorCloneCaretBelow)
+
+map <leader>m1 <Action>(ToggleBookmark1)
+map <leader>m2 <Action>(ToggleBookmark2)
+map <leader>m3 <Action>(ToggleBookmark3)
+map <leader>m4 <Action>(ToggleBookmark4)
+map <leader>m5 <Action>(ToggleBookmark5)
+
+map <leader>1 <Action>(GotoBookmark1)
+map <leader>2 <Action>(GotoBookmark2)
+map <leader>3 <Action>(GotoBookmark3)
+map <leader>4 <Action>(GotoBookmark4)
+map <leader>5 <Action>(GotoBookmark5)
+
+map <leader>l <Action>(ShowErrorDescription)
+
+map <leader>z <Action>(WindowLayoutManager.Restore.0)
+
+map <leader>bs <Action>(BuildWholeSolutionAction)
+map t <Action>(ExpandCollapseToggleAction)
+
+map :wf <Action>(Javascript.Linters.EsLint.Fix):w
+map :wr <Action>(CodeCleanup)
+map :diff <Action>(ShowBlankDiffWindow)
+
+map <A-r> <Action>(Resume)
