@@ -21,6 +21,7 @@ sudo apt-get install zsh -y
 echo "Installed zsh in $(which zsh)"
 ZSH="$HOME/.config/oh-my-zsh" KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
+mkdir -p $PLUGIN_DIR
 if [ ! -d "$PLUGIN_DIR/zsh-autosuggestions" ]; then
     git clone $ZSH_AUTOSUGGEST "$PLUGIN_DIR/zsh-autosuggestions" > /dev/null
 fi

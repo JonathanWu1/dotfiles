@@ -23,16 +23,10 @@ for pkg in "${packages[@]}"; do
     fi
 done
 
-echo "Installing fnm"
-curl -fsSL https://fnm.vercel.app/install | zsh > /dev/null
-printf $CLEAR
-echo "Installed fnm"
-
 echo "Installing neovim"
 sudo snap install nvim --classic > /dev/null
 printf $CLEAR
 echo "Installed neovim"
-
 
 echo "Installing ghostty"
 sudo snap install ghostty --classic > /dev/null
@@ -43,24 +37,19 @@ ln -s $HOME/dotfiles/configs/ghostty $HOME/.config/ghostty
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /snap/bin/ghostty 0 > /dev/null
 sudo update-alternatives --set x-terminal-emulator /snap/bin/ghostty > /dev/null
 
-
 echo "Installing 1password"
 chmod +x ./scripts/1password.sh > /dev/null
 ./scripts/1password.sh > /dev/null 2>&1
 printf $CLEAR
 echo "Installed 1password"
 
-
 echo "Installing zsh"
-chmod +x ./scripts/zsh-install.sh > /dev/null
+chmod +x ./scripts/zsh.sh > /dev/null
 ./scripts/zsh.sh > /dev/null
 printf $CLEAR
 echo "Installed zsh"
 
-
-
-
-
-
-
-
+echo "Installing fnm"
+curl -fsSL https://fnm.vercel.app/install | zsh > /dev/null
+printf $CLEAR
+echo "Installed fnm"
