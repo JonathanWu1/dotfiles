@@ -12,6 +12,7 @@ plugins=(
     zsh-vi-mode
 )
 
+export GCM_CREDENTIAL_STORE="gpg"
 export ZSH_CUSTOM="$HOME/.config/oh-my-zsh/custom"
 export ZSH="$HOME/.config/oh-my-zsh/"
 source $ZSH/oh-my-zsh.sh
