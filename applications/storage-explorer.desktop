@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Storage Explorer
+Type=Application
+Exec=/home/jonathanwu/.local/share/storage-explorer/StorageExplorer %U
+Terminal=false
+Actions=new-window;
+
