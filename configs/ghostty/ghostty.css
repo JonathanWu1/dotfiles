@@ -1,8 +1,4 @@
-window{
-    border: solid 0px black;
-}
 button{
-    background-color:#444444;
     border-radius: 100%;
     border:0;
     opacity:1;
@@ -19,9 +15,9 @@ menubutton.popup{
     border:0;
     background-size:0;
 }
+
 menubutton.popup>button.image-button{
     background-color:#444444;
-    border-radius: 100%;
     border:0;
     opacity:1;
     outline:0;
@@ -35,8 +31,8 @@ menubutton.popup>button.image-button>box.horizontal{
     border:0;
     margin:0;
     padding:0;
-
 }
+
 windowcontrols.end{
     -gtk-icon-size:0;
     min-width: 0;
@@ -46,6 +42,7 @@ windowcontrols.end{
     border:0;
     background-size:0;
 }
+
 windowcontrols.end>button{
     -gtk-icon-size:0;
     min-width: 0;
@@ -55,6 +52,7 @@ windowcontrols.end>button{
     border:0;
     background-size:0;
 }
+
 widget.end-action>box>button.image-button{
     -gtk-icon-size:0;
     min-width: 0;
@@ -69,27 +67,23 @@ widget.end-action{
     padding-top:4px;
     padding-bottom:4px;
 }
+
 widget.start-action>box>splitbutton>separator{
     opacity:0;
 }
 tabbox>separator{
     opacity:0;
 }
-widget.start-action{
-    padding-top:4px;
-    padding-bottom:4px;
+/* widget.start-action{ */
+/*     padding-top:4px; */
+/*     padding-bottom:4px; */
+/* } */
+
+tabboxchild{
+    background-color:#444444;
+    border-radius:8px;
 }
 
-tabboxchild.active{
-    background-color:#555555;
-    border-radius:16px;
-    padding:4px;
-}
-tabboxchild{
-    background-color:#333333;
-    border-radius:16px;
-    padding:4px;
-}
 tabboxchild>tab>button{
-    margin-right:8px
+    margin-right:4px
 }
