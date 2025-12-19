@@ -4,7 +4,8 @@ default_border none
 
 exec --no-startup-id /usr/lib/gsd-xsettings
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xset s 300
+exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/jonathanwu/dotfiles/configs/i3/lock.sh --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id picom --experimental-backends
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -78,6 +79,8 @@ bindsym $mod+Shift+r move container to workspace  $ws8
 
 # kill focused window
 bindsym $mod+Shift+x kill
+
+bindsym $mod+F9 exec /home/jonathanwu/dotfiles/configs/i3/lock.sh 
 
 # reload the configuration file
 # bindsym XF86Launch5 reload

@@ -57,5 +57,6 @@ echo "Installed zsh"
 
 echo "Installing fnm"
 curl -fsSL https://fnm.vercel.app/install | zsh > /dev/null
+$(which fnm) install --latest
 printf $CLEAR
 echo "Installed fnm"
