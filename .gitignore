@@ -8,3 +8,4 @@ profileinfo.txt
 *.zip
 
 configs/zsh/oh-my-zsh/custom/plugins
+arch/oh-my-zsh/custom/plugins/
