@@ -14,7 +14,7 @@ mkdir -p "$HOME/.config/vpnconfig"
 openssl genrsa -out "$HOME/.config/vpnconfig/caKey.pem" 2048
 openssl req -x509 -new -nodes -key "$HOME/.config/vpnconfig/caKey.pem" -subj "/CN=VPN CA" -days 3650 -out "$HOME/.config/vpnconfig/caCert.pem"
 
-openssl x509 -in "$HOME/.config/vpnconfig/caCert.pem" -outform der | base64 -w0 | tee -a "$HOME/.config/vpnconfig/clientCert_base64.txt" | xclip -selection clipboard
+openssl x509 -in "$HOME/.config/vpnconfig/caCert.pem" -outform der | base64 -w0 | tee -a "$HOME/.config/vpnconfig/clientCert_base64.txt" | wl-copy 
 
 # Generate a private key
 openssl genrsa -out "$HOME/.config/vpnconfig/${USERNAME}Key.pem" 2048

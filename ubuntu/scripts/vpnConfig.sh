@@ -2,10 +2,10 @@ rm -rf "$HOME/.temp/vpn"
 mkdir -p "$HOME/.temp/vpn"
 cp "$HOME/Downloads/vpng-logineer-tunnel.zip" "$HOME/.temp/vpn/vpn.zip"
 
-sudo apt-get install -y unzip openvpn network-manager-openvpn
+sudo pacman -Sy unzip openvpn networkmanager-openvpn
 sudo systemctl restart systemd-networkd
 
-unzip -o "$HOME/.temp/vpn/vpn.zip" -d "$HOME/.temp/vpn/vpn"
+unzip -o "./vpn.zip" -d "$HOME/.temp/vpn/vpn"
 
 mkdir -p $HOME/.config/vpnconfig
 

@@ -32,8 +32,6 @@ git clone https://github.com/jonathanwu1/nvim ~/.config/nvim > /dev/null 2>&1
 printf $CLEAR
 echo "Installed neovim"
 
-
-
 echo "Installing ghostty"
 sudo snap install ghostty --classic > /dev/null
 rm -rf $HOME/.config/ghostty
