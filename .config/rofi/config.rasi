@@ -1,0 +1,97 @@
+* {
+    spacing: 0em;
+    padding: 0px;
+    line-style: "none";
+    width: 800px;
+    height: 490px;
+}
+
+prompt-box {
+  background-color    : transparent;
+}
+
+prompt {
+  background-color    : transparent;
+  text-color          : white;
+}
+
+window {
+    border            : 0px;
+    border-radius     : 12px;
+    border-color      : black;
+    background-color  : rgba(25, 23, 36, 0.5);
+    color: rgba(68, 68, 68, 1);
+}
+
+mainbox {
+    background-color  : transparent;
+    color: rgba(68, 68, 68, 1);
+    spacing           : 0%;
+    padding           : 20px;
+}
+
+listview {
+    // Looks.
+    margin: 20px 0px 0px 0px;
+    background-color  : transparent;
+    // Enable scrollbar
+    scrollbar         : false;
+    scrollbar-width   : 5px;
+    fixed-height      : true;
+    reverse           : false;
+    color             : #000000;
+    spacing           : 0.5em;
+}
+
+scrollbar {
+    color: black;
+    background-color: @blue;
+    padding: 1px;
+}
+
+element {
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0px;
+    spacing: 0.5em;
+    color: #e0def4;
+    background-color: rgba(64, 61, 82, 1);
+    children: [ element-icon, element-text ];
+}
+
+element selected.normal {
+    color: #1f1d2e;
+    background-color: #c4a7e7;
+}
+
+element normal.normal {
+    color: #e0def4;
+    background-color: rgba(64, 61, 82, 1);
+}
+
+element alternate.normal {
+    color: #e0def4;
+    background-color: rgba(64, 61, 82, 1);
+}
+
+inputbar {
+    spacing           : 5px;
+    background-color  : #524f67;
+    border            : 0px 0px 2px 0px;
+    border-radius     : 5px;
+    padding           : 15px;
+    color             : #e0def4;
+}
+
+prompt normal.normal {
+    background-color  : #00000000;
+    color             : #ffffff;
+    padding           : 0px;
+}
+
+entry normal.normal {
+    background-color  : transparent; 
+    color             : #ffffff;
+    padding           : 0px;
+}
