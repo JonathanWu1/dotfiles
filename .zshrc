@@ -50,3 +50,5 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/scripts/aliases.zsh
+export PATH="$HOME/.local/bin:$PATH"

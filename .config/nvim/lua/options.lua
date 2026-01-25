@@ -1,0 +1,40 @@
+vim.opt.number = true
+vim.opt.relativenumber = false
+vim.opt.tabstop = 8
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.schedule(function()
+    vim.opt.clipboard = 'unnamedplus'
+end)
+vim.opt.breakindent = true
+vim.opt.undofile = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
+vim.opt.splitright = false
+vim.opt.splitbelow = false
+vim.opt.list = true
+
+vim.opt.listchars = {
+    lead = ' ',
+    tab = '  ',
+    trail = '-',
+    leadmultispace = ' ',
+}
+
+vim.opt.inccommand = 'split'
+vim.opt.cursorline = true
+vim.opt.scrolloff = 15
+vim.opt.wrap = false
+-- Disable wrapping in general
+vim.opt.wrap = false
+
+-- Enable wrapping only inside diagnostic floats
+vim.diagnostic.config {
+    float = {
+        wrap = true,
+        border = 'rounded',
+    },
+}

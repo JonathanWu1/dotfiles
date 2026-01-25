@@ -11,7 +11,7 @@ keybind=ctrl+shift+e=unbind
 
 gtk-wide-tabs=false
 
-background-opacity=0.85
+background-opacity=.9
 window-theme=ghostty
 background=#232136
 window-decoration=server

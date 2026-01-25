@@ -90,6 +90,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#custom-vpn,
 #custom-ytm{
     min-height: 5px;
     padding: 0 10px;
@@ -98,6 +99,13 @@ button:hover {
     border-radius: 5px;
     margin-bottom: 3px;
     margin-top: 3px;
+}
+
+#custom-vpn.active {
+    background-color: rgba(94, 194, 74, 0.7);  /* green */
+}
+#custom-vpn.inactive {
+    background-color: rgba(194, 74, 74, 0.7);  /* red */
 }
 
 .modules-left {

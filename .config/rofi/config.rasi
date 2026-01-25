@@ -95,3 +95,7 @@ entry normal.normal {
     padding           : 0px;
 }
 
+message{
+    color: #ffffff;
+}
+

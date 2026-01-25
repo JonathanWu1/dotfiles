@@ -2,7 +2,7 @@
 {
     "position": "bottom", 
     "output": "DP-1",
-    "height": 32, 
+    "height": 34, 
     //"width": 1280, 
     "spacing": 4, 
     "modules-left": [
@@ -16,6 +16,7 @@
         "cpu",
         "memory",
         "network",
+        "custom/vpn",
         //"battery",
         "clock"
     ],
@@ -103,6 +104,12 @@
     "custom/ytm": {
         "format": "",
         "on-click": "youtube-music-desktop-app"
+    },
+    "custom/vpn": {
+        "exec": "~/scripts/vpn_status.sh",
+        "interval": 5,
+        "return-type": "json",
+        "on-click": "gnome-terminal -- bash -c '~/scripts/vpn_control.sh'"
     },
     "custom/power": {
         "format" : "⏻ ",
