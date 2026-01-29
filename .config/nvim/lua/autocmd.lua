@@ -18,3 +18,8 @@ vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
         vim.opt.filetype = 'curl'
     end,
 })
+
+vim.api.nvim_create_user_command('JsonDestr', function()
+    vim.cmd ':%s/\\\\//ge'
+    vim.cmd [[:%!jq '.']]
+end, {})

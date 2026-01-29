@@ -42,6 +42,7 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 export PATH="$PATH:$HOME/.local/share/fnm/aliases/default"
+export PATH="$PATH:$HOME/.local/share/fnm/aliases/default/bin"
 export SSH_HOME="$HOME/.local/share/ssh"
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
@@ -52,3 +53,5 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 source $ZSH/oh-my-zsh.sh
 source $HOME/scripts/aliases.zsh
 export PATH="$HOME/.local/bin:$PATH"
+export SSL_CERT_DIR=/etc/ssl/certs
+export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt

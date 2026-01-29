@@ -19,7 +19,7 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
-export PATH="$PATH:$HOME/.local/share/fnm/aliases/default"
+export PATH="$PATH:$HOME/.local/share/fnm/aliases/default/bin/"
 export SSH_HOME="$HOME/.local/share/ssh"
 
 

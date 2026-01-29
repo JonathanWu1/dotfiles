@@ -90,3 +90,4 @@ map :wr <Action>(CodeCleanup)
 map :diff <Action>(ShowBlankDiffWindow)
 
 map <A-r> <Action>(Resume)
+map <A-p> <Action>(Console.Jdbc.ExplainPlan)

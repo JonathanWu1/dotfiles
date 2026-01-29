@@ -95,7 +95,7 @@ entry normal.normal {
     padding           : 0px;
 }
 
-message{
+textbox{
+    background-color: transparent;
     color: #ffffff;
 }
-
