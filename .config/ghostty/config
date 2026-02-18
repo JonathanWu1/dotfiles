@@ -11,9 +11,9 @@ keybind=ctrl+shift+e=unbind
 
 gtk-wide-tabs=false
 
-background-opacity=.9
+background-opacity=.95
 window-theme=ghostty
-background=#232136
+background=#111111
 window-decoration=server
 
 gtk-custom-css=~/.config/ghostty/ghostty.css

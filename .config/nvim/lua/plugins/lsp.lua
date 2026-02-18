@@ -19,16 +19,15 @@ return {
                 map('gd', require('telescope.builtin').lsp_definitions)
                 map('gu', require('telescope.builtin').lsp_references)
                 map('gi', require('telescope.builtin').lsp_implementations)
-                map('<leader>D', require('telescope.builtin').lsp_type_definitions)
-                map('<leader>ds', require('telescope.builtin').lsp_document_symbols)
-                map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols)
+                map('ge', vim.lsp.buf.declaration)
+                map('<C-k>', require('telescope.builtin').lsp_type_definitions)
                 map('<leader>rn', vim.lsp.buf.rename)
                 map('<leader>ca', vim.lsp.buf.code_action, { 'n', 'x' })
-                map('gD', vim.lsp.buf.declaration)
 
                 local client = vim.lsp.get_client_by_id(event.data.client_id)
-                if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
+                if client and client.supports_method 'textDocument/documentHighlight' then
                     local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
+
                     vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
                         buffer = event.buf,
                         group = highlight_augroup,
@@ -85,46 +84,8 @@ return {
 
         vim.lsp.config('roslyn', {
             capabilities = capabilities,
-            on_attach = function()
-                print 'This will run when the server attaches!'
-            end,
+            on_attach = function() end,
         })
-
-        -- vim.lsp.config('tailwindcss', {
-        --     settings = {
-        --         tailwindCSS = {
-        --             classAttributes = { 'class', 'className' },
-        --             filetypes = { 'typescript' },
-        --             lint = {
-        --                 cssConflict = 'warning',
-        --                 invalidApply = 'error',
-        --                 invalidConfigPath = 'error',
-        --                 invalidScreen = 'error',
-        --                 invalidTailwindDirective = 'error',
-        --                 invalidVariant = 'error',
-        --                 recommendedVariantOrder = 'warning',
-        --             },
-        --             validate = true,
-        --             files = {
-        --                 exclude = { '**/node_modules/**', '**/.git/**', '**/dist/**', '**/.next/**', '**/abpSrc/**', '**/obj/**', '**/bin/**' },
-        --             },
-        --         },
-        --     },
-        --
-        --     -- filetypes = {aspnetcorerazor, astro, astro-markdown, blade, clojure, django-html, htmldjango, edge, eelixir, elixir, ejs, erb, eruby, gohtml, gohtmltmpl, haml, handlebars, hbs, html, htmlangular, html-eex, heex, jade, leaf, liquid, markdown, mdx, mustache, njk, nunjucks, php, razor, slim, twig, css, less, postcss, sass, scss, stylus, sugarss, javascript, javascriptreact, reason, rescript, typescript, typescriptreact, vue, svelte, templ}
-        --     filetypes = {
-        --         'html',
-        --         'css',
-        --         'less',
-        --         'postcss',
-        --         'sass',
-        --         'scss',
-        --         'javascript',
-        --         'javascriptreact',
-        --         'typescript',
-        --         'typescriptreact',
-        --     },
-        -- })
 
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }
         require('mason-lspconfig').setup {
