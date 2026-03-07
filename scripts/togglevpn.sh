@@ -9,7 +9,7 @@ if ip -br addr | grep -q tun; then
         echo "Vpn disconnected"
     fi
 else
-    exec sudo openvpn --config $HOME/.config/vpnconfig/vpnconfig.ovpn --log $HOME/.cache/vpn/vpn.log &
+    exec sudo openvpn --config $HOME/.config/vpnconfig/vpnconfig.ovpn --log $HOME/.cache/vpn/vpn.log --disable-dco &
     sleep 2
     echo "Vpn connected"
     ip -br addr

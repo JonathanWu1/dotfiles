@@ -36,3 +36,7 @@ vim.api.nvim_create_user_command('ToTs', function()
     vim.cmd [[silent! :%s/: \(bool\)/: boolean]]
     vim.cmd [[silent! :%s/\(\u\)\(\w*\) :/\l\1\2 :]]
 end, {})
+
+vim.api.nvim_create_user_command('ToSqlList', function()
+    vim.cmd [[silent! :%s/\(.*\)/'\1',]]
+end, {})
