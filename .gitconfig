@@ -3,3 +3,5 @@
 [user]
 	name = Jonathan Wu
 	email = jonathan.wu@cargonerds.com
+[safe]
+	directory = /home/jonathanwu/cargonerds/ultra-mega-project/cargonerds-hub

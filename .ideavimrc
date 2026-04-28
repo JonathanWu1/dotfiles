@@ -17,14 +17,11 @@ map <leader>fc <Action>(GotoClass)
 map <leader>fg <Action>(TextSearchAction)
 
 map <A-e> <Action>(RecentFiles)  
-
-map gf <Action>(SelectIn)  
-map gc <Action>(ExternalSystem.CollapseAll)
-
 map <C-g> <Action>(Git.Branches)
 map <C-t> <Action>(ChooseDebugConfiguration)
 
-nnoremap <A-r> :~/.ideavimrc<CR>
+map gf <Action>(SelectIn)  
+map gc <Action>(ExternalSystem.CollapseAll)
 
 map <leader>db <Action>(ToggleLineBreakpoint)
 map <leader>dab <Action>(RiderRemoveAllLineBreakpoints)

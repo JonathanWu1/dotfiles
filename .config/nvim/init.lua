@@ -16,3 +16,9 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup {
     { import = 'plugins' },
 }
+
+vim.filetype.add {
+    extension = {
+        tpl = 'html',
+    },
+}

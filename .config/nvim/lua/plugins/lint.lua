@@ -9,7 +9,6 @@ return {
             -- https://github.com/mfussenegger/nvim-lint?tab=readme-ov-file#available-linters
             lint.linters_by_ft = {
                 markdown = { 'markdownlint' },
-                html = { 'htmlhint' },
                 yaml = { 'yamllint' },
             }
 

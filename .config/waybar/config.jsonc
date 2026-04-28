@@ -3,6 +3,9 @@
     "position": "bottom", 
     "output": "DP-1",
     "height": 34, 
+    "start_hidden": true,
+    "modifier-reset": "press",
+    "on-sigusr1" : "toggle",
     //"width": 1280, 
     "spacing": 4, 
     "modules-left": [
