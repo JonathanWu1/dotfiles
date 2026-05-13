@@ -1,6 +1,9 @@
 [ContentDisplay]
 UseShortRelativeDates=false
 
+[FoldersPanel]
+HiddenFilesShown=true
+
 [General]
 SortingChoice=CaseInsensitiveSorting
 Version=202

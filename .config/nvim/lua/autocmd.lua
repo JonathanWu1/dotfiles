@@ -40,3 +40,13 @@ end, {})
 vim.api.nvim_create_user_command('ToSqlList', function()
     vim.cmd [[silent! :%s/\(.*\)/'\1',]]
 end, {})
+
+vim.api.nvim_create_user_command('RunC', function()
+    local buffer = vim.api.nvim_get_current_buf()
+    local fileType = vim.api.nvim_get_option_value('filetype', { buf = buffer })
+    if fileType == 'c' then
+        local lines = vim.api.nvim_buf_get_lines(buffer, 0, -1, false)
+        vim.fn.writefile(lines, '/tmp/temp.c')
+        vim.cmd [[:!gcc /tmp/temp.c -o /tmp/temp && /tmp/temp]]
+    end
+end, {})

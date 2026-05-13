@@ -49,3 +49,5 @@ vim.keymap.set('n', '<F11>', '<Nop>')
 vim.keymap.set('n', '<F12>', '<Nop>')
 vim.keymap.set('n', '<F13>', '<Nop>')
 vim.keymap.set('n', '<F14>', '<Nop>')
+
+vim.keymap.set('n', '<C-CR>', ':RunC<CR>')
