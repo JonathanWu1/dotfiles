@@ -1,12 +1,20 @@
+if [ -z "$CONFIGS_DIR" ]; then
+    echo "No configs dir found"
+    export CONFIGS_DIR="$HOME/dotfiles/.config"
+fi
+
+export ZSH="$CONFIGS_DIR/.oh-my-zsh"
+
+
 ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME}/.local/share/shell"
+ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump"
+
 mkdir -p "$ZSH_CACHE_DIR"
-export ZSH="$HOME/.oh-my-zsh"
 export HISTFILE="$ZSH_CACHE_DIR/.zsh_history"
 
 autoload -Uz compinit
 compinit -d "$ZSH_CACHE_DIR/zcompdump"
 
-ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 unsetopt correct_all
 
@@ -33,7 +41,10 @@ plugins=(
 function zvm_after_init() {
     bindkey -r -M vicmd '^Y'   # Unbind Ctrl+Y in normal mode
     bindkey -M viins '^Y' end-of-line
+    ZVM_SYSTEM_CLIPBOARD_ENABLED=true
 }
+
+source $ZSH/oh-my-zsh.sh
 
 FNM_PATH="/home/jonathanwu/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
@@ -44,14 +55,12 @@ fi
 export PATH="$PATH:$HOME/.local/share/fnm/aliases/default"
 export PATH="$PATH:$HOME/.local/share/fnm/aliases/default/bin"
 export SSH_HOME="$HOME/.local/share/ssh"
-alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 
-source $ZSH/oh-my-zsh.sh
-source $HOME/scripts/aliases.zsh
+source $DOTFILES/scripts/aliases.zsh
 export PATH="$HOME/.local/bin:$PATH"
 export SSL_CERT_DIR=/etc/ssl/certs
 export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
@@ -60,3 +69,12 @@ export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 export PATH="$HOME/.aspire/bin:$PATH"
 export PATH="$HOME/.dotnet/tools/:$PATH"
 export PATH="$HOME/source/azd-linux/:$PATH"
+
+
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/share/git-credential-manager"
+
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

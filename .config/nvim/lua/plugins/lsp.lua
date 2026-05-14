@@ -66,9 +66,7 @@ return {
                 },
             },
             ts_ls = {},
-            html = {},
-            terraformls = {},
-            hyprls = {},
+            roslyn = {},
         }
         require('mason').setup {
             registries = {

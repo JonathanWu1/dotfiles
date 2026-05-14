@@ -1,1 +1,5 @@
-*
+.zcomp*
+.shell.pre-oh-my-zsh
+.config/.oh-my-zsh
+
+**/openvpn.log

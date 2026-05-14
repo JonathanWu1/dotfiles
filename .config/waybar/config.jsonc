@@ -1,12 +1,9 @@
 // -*- mode: jsonc -*-
 {
     "position": "bottom", 
-    "output": "DP-1",
+    "output": "DP-7",
     "height": 34, 
-    "start_hidden": true,
     "modifier-reset": "press",
-    "on-sigusr1" : "toggle",
-    //"width": 1280, 
     "spacing": 4, 
     "modules-left": [
         "custom/ytm",
@@ -90,16 +87,10 @@
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
