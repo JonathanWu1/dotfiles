@@ -4,4 +4,4 @@ alias vpn="$HOME/dotfiles/scripts/togglevpn.sh"
 alias ls="ls -1"
 alias sparkt="cd $HOME/cargonerds/spark-techreview/"
 alias azenv="source ~/source/azure-cli/env/bin/activate"
-
+alias hypr="nvim ~/dotfiles/.config/hypr/"
