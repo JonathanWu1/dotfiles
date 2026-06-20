@@ -16,12 +16,13 @@ grub 2:2.14-1
 hyprland 0.55.1-1
 hyprpaper 0.8.4-1
 hyprpolkitagent 0.1.3-7
+keychain 2.9.8-1
 ly 1.4.0-1
 mako 1.11.0-1
+neovim 0.12.2-1
 networkmanager 1.56.0-1
 networkmanager-openvpn 1.12.5-1
 otf-ipafont 003.03-9
-pass 1.7.4-7
 pavucontrol 1:6.2-1
 rofi 2.0.0-1
 thunar 4.20.8-3

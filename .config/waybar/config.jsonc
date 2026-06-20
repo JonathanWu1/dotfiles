@@ -100,7 +100,7 @@
         "on-click": "youtube-music-desktop-app"
     },
     "custom/vpn": {
-        "exec": "~/scripts/vpn_status.sh",
+        "exec": "~/dotfiles/scripts/vpn_status.sh",
         "interval": 5,
         "return-type": "json",
         "on-click": "gnome-terminal -- bash -c '~/scripts/vpn_control.sh'"
