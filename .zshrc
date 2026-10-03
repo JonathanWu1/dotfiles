@@ -5,6 +5,10 @@ fi
 
 export ZSH="$CONFIGS_DIR/.oh-my-zsh"
 
+# Default editor (Claude Code, git, etc.) -- also set in .profile for login shells
+export EDITOR=nvim
+export VISUAL=nvim
+
 
 ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME}/.local/share/shell"
 ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump"
@@ -78,6 +82,3 @@ export PATH="$PATH:$HOME/.local/share/git-credential-manager"
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-eval "$(keychain --eval --quiet ~/.ssh/id_ed25519 ~/.ssh/id_rsa_azure)"

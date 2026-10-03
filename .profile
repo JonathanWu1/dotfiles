@@ -12,6 +12,8 @@ export DOTFILES="$HOME/dotfiles"
 export CONFIGS_DIR="$HOME/dotfiles/.config"
 export ZDOTDIR="$DOTFILES"
 export GIT_EDITOR=nvim
+export EDITOR=nvim
+export VISUAL=nvim
 
 alias bash="bash --rcfile $DOTFILES/.bashrc"
 export XDG_CONFIG_HOME="$HOME/.config"

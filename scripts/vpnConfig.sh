@@ -1,6 +1,6 @@
 rm -rf "$HOME/.temp/vpn"
 mkdir -p "$HOME/.temp/vpn"
-cp "$HOME/downloads/vpnclientconfiguration.zip" "$HOME/.temp/vpn/vpn.zip"
+cp "$HOME/Downloads/vpnclientconfiguration.zip" "$HOME/.temp/vpn/vpn.zip"
 
 sudo pacman -Sy unzip openvpn networkmanager-openvpn
 sudo systemctl restart systemd-networkd

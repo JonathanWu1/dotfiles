@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
     "position": "bottom", 
-    "output": "DP-7",
+    "output": "eDP-1",
     "height": 34, 
     "modifier-reset": "press",
     "spacing": 4, 
@@ -17,7 +17,7 @@
         "memory",
         "network",
         "custom/vpn",
-        //"battery",
+        "battery",
         "clock"
     ],
     //Modules configuration

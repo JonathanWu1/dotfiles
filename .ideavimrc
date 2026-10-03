@@ -1,5 +1,7 @@
 let mapleader = " "
 
+set wrap
+
 set clipboard+=unnamedplus
 
 set scrolloff=10
